@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:backgroundTint="@android:color/background_light"
+    tools:context="com.example.asha.tictactoe.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitStart"
+        app:srcCompat="@drawable/cross" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/b1"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="0"
+            app:srcCompat="@drawable/zero" />
+
+        <ImageView
+            android:id="@+id/b2"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="1"
+            app:srcCompat="@drawable/zero" />
+
+        <ImageView
+            android:id="@+id/b3"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="2"
+            app:srcCompat="@drawable/zero" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/b4"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="3"
+            app:srcCompat="@drawable/zero" />
+
+        <ImageView
+            android:id="@+id/b5"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="4"
+            app:srcCompat="@drawable/zero" />
+
+        <ImageView
+            android:id="@+id/b6"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="5"
+            app:srcCompat="@drawable/zero" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/ll"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/b7"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="6"
+            app:srcCompat="@drawable/zero" />
+
+        <ImageView
+            android:id="@+id/b8"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="7"
+            app:srcCompat="@drawable/zero" />
+
+        <ImageView
+            android:id="@+id/b9"
+            android:layout_width="25dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/ll"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:alpha="0"
+            android:onClick="b"
+            android:tag="8"
+            app:srcCompat="@drawable/zero" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        android:gravity="bottom"
+        android:text="Choose"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/iv2"
+        android:layout_marginEnd="17dp"
+        android:layout_toStartOf="@+id/tv2"
+        android:onClick="O"
+        app:srcCompat="@drawable/zero" />
+
+    <ImageView
+        android:id="@+id/iv2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/tv1"
+        android:layout_marginBottom="-80dp"
+        android:layout_toEndOf="@+id/tv2"
+        android:onClick="X"
+        android:src="@drawable/x" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:text="or"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv2"
+        android:layout_alignBottom="@+id/tv2"
+        android:layout_alignStart="@+id/iv2"
+        android:layout_marginStart="17dp"
+        android:alpha="0"
+        android:text="Wins!"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="reset"
+        android:text="RESET" />
+
+</RelativeLayout>
